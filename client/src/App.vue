@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <Header />
-    <router-view/>
+    <div class="container">
+      <Header />
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -27,8 +29,9 @@ export default {
   }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    line-height: 1.6;
+    background: #0a0101
   }
 
   .btn {
@@ -42,5 +45,12 @@ export default {
 
   .btn:hover {
     background: #666;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2rem;
   }
 </style>

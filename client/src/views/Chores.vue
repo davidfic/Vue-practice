@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <AddChore/>
-        <Chores/>
+        <AddChore />
+        <Chores />
     </div>
 </template>
 

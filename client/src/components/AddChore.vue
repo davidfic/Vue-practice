@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h3>Add Chore</h3>
         <div class="add">
             <form>
                 <input type="text" v-model="title" placeholder="Add Chore">

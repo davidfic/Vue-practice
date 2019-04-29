@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
 
-
+    <!-- <AddChore/> -->
     </div>
     <!-- <AddTodo v-on:add-todo="addTodo"/> -->
     <!-- <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/> -->
@@ -19,6 +19,8 @@ import Todos from '../components/Todos';
 import AddTodo from '../components/AddTodo'; 
 import Buckets from '../components/Buckets';
 import Chores from '../components/Chores'
+// import AddChore from '../components/AddChore'
+
 
 import axios from 'axios';
 
@@ -29,6 +31,8 @@ export default {
     Todos,
     AddTodo,
     Buckets,
+    // AddChore,
+  
   },
   data() {
     return {
@@ -73,24 +77,18 @@ export default {
 }
 </script>
 
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
+<style scoped>
   body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    line-height: 1.6;
+    background: #032917;
   }
-
-  /* .container {
+  .container {
     max-width: 1100px;
     margin: auto;
     overflow: auto;
     padding: 0 2rem;
-  } */
+  }
   .btn {
     display: inline-block;
     border: none;
