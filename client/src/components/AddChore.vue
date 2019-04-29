@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="add">
-            <form>
+            <form @submit="onSubmit">
                 <input type="text" v-model="title" placeholder="Add Chore">
                 <input type="submit" value="Submit">
             </form>
@@ -11,8 +11,21 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
-    name: "AddChore"
+    name: "AddChore",
+    data() {
+        return {
+            title: ''
+        }
+    },
+    methods: {
+        ...mapActions(['addChore']),
+        onSubmit(e) {
+            e.preventDefault();
+            this.addChore(this.title);
+        }
+    }
 };
 </script>
 

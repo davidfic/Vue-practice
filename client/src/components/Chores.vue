@@ -4,7 +4,7 @@
         <AddChore />
         <div class="chores">
         <!-- <h3>Add Chore</h3> -->
-            <div v-for="chore in allChores" :key="chore.id" class="chore">
+            <div v-for="chore in allChores" :key="chore.title" class="chore">
                 {{ chore.title }}
             </div>
         </div>

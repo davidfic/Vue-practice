@@ -52,9 +52,9 @@ def get_kids():
     return jsonify(get_kids_from_db())
 
 
-@app.route('/todos', methods = ['POST', 'GET'])
-def todos():
-    todos = [
+@app.route('/chores', methods = ['POST', 'GET'])
+def chores():
+    chores = [
         {'id': 1, 'completed': False, 'title': 'hello'},
         {'id': 2, 'completed': False, 'title': 'this is'},
         {'id': 3, 'completed': False, 'title': 'a test'},
@@ -62,7 +62,7 @@ def todos():
         {'id': 6, 'completed': False, 'title': 'why'},
         {'id': 5, 'completed': False, 'title': 'blah2'},
     ]
-    return jsonify(todos)
+    return jsonify(chores)
 
 
 @app.route('/wishlists', methods=['POST', 'GET'])
