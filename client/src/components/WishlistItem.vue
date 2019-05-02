@@ -64,9 +64,9 @@ export default {
       });
   },
   methods: {
-    refresh() {
-      this.$refs.g1.refresh(this.getRandomInt(0, 100));
-    }
+    // refresh() {
+    //   this.$refs.g1.refresh(this.getRandomInt(0, 100));
+    // }
   }
 
 
