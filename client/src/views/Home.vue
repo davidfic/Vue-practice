@@ -8,7 +8,7 @@
     <!-- <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/> -->
     <Buckets v-bind:buckets="buckets" v-on:add-money="addMoney"/>
     
-    
+    <button @onClicl="clicktest" type="button">Test</button>
   </div>
 </template>
 
@@ -68,6 +68,9 @@ export default {
       console.log('going to add ' +amount + ' to bucket with id ' + id ) 
              
     },
+    clicktest() {
+      console.log('it worked')
+    }
   },
   created() {
     axios.get('http://localhost:5000/todos')

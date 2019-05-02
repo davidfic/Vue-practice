@@ -6,12 +6,12 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-
     </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+
 export default {
     name: "AddChore",
     data() {

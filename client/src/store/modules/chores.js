@@ -10,12 +10,12 @@ const getters = {
 
 const actions  = {
     async fetchChores({commit}) {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+        const response = await axios.get('http://localhost:5000/chores');
         // const response = await axios.get('http://localhost:5000/chores');
         commit('setChores', response.data);
     },
     async addChore({commit}, title) {
-        const response = await axios.post('https://jsonplaceholder.typicode.com/todos', {title, completed: false});
+        const response = await axios.post('http://localhost:5000/chores', {title, completed: false});
         commit('newChore', response.data);
     }
 };

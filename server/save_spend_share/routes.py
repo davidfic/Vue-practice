@@ -55,25 +55,36 @@ def get_kids():
 @app.route('/chores', methods = ['POST', 'GET'])
 def chores():
     chores = [
-        {'id': 1, 'completed': False, 'title': 'hello'},
-        {'id': 2, 'completed': False, 'title': 'this is'},
-        {'id': 3, 'completed': False, 'title': 'a test'},
-        {'id': 4, 'completed': False, 'title': 'blah'},
-        {'id': 6, 'completed': False, 'title': 'why'},
-        {'id': 5, 'completed': False, 'title': 'blah2'},
+        {'id': 1, 'completed': False, 'title': 'laundry'},
+        {'id': 2, 'completed': False, 'title': 'sweeping'},
+        {'id': 3, 'completed': False, 'title': 'trash'},
+        {'id': 4, 'completed': False, 'title': 'bathroom'},
     ]
     return jsonify(chores)
 
 
 @app.route('/wishlists', methods=['POST', 'GET'])
 def wishlists():
+    if request.method == 'POST':
+        print('hello there from post')
+        # amount = request.data('amount')
+        print(f"request data is {request.data}")
+        
     wishlists = [
-        {'id': 1, 'name': 'wish1', 'goal': 100, 'added': 50},
-        {'id': 2, 'name': 'wish2', 'goal': 100, 'added': 50},
-        {'id': 3, 'name': 'wish3', 'goal': 100, 'added': 50}
+        {'id': 1, 'name': 'xbox', 'goal': 250, 'added': 50},
+        {'id': 2, 'name': 'lego', 'goal': 80, 'added': 75},
+        {'id': 3, 'name': 'ps4', 'goal': 250, 'added': 200}
     ]
     return jsonify(wishlists)
 
+@app.route('/todos', methods=['POST', 'GET'])
+def todos():
+    todos = [
+        {'id': 1, 'name': 'wish1', 'goal': 100, 'added': 22},
+        {'id': 2, 'name': 'wish2', 'goal': 101, 'added': 3},
+        {'id': 3, 'name': 'wish3', 'goal': 102, 'added': 75}
+    ]
+    return jsonify(todos)
     
 @app.route('/')
 @app.route('/home')#, methods=['POST', 'GET'])
